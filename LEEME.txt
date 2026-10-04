@@ -1,0 +1,6 @@
+PASTA D'ANNA - VERSION DE PRUEBAS
+
+- Calendario y desplegables con altura uniforme de 50 px.
+- Calendario nativo conservado.
+- Estilo oscuro y dorado integrado.
+- Mantiene registro atomico, correlativo centralizado y modo prueba.
