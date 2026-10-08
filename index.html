@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pasta D'Anna · Navidad venezolana en Madrid · Pedidos</title>
+<meta name="description" content="Hallacas, pan de jamón, ponche crema y torta negra. Sabores de la Navidad venezolana en Madrid. Haz tu pedido online.">
+<meta property="og:title" content="Pasta D'Anna · Navidad venezolana en Madrid">
+<meta property="og:description" content="Hallacas, pan de jamón, ponche crema y torta negra. ¡Haz tu pedido!">
+<meta property="og:image" content="img/cartel-navidad.jpg">
+<meta name="theme-color" content="#8b0a1e">
+<link rel="icon" href="img/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --verde-noche:#05200f; --verde:#0b3d22; --verde2:#146b3a; --verde-claro:#2e9e5b;
+  --rojo:#c8102e; --rojo2:#8b0a1e; --rojo-noche:#4a0510;
+  --oro:#f2c14e; --oro2:#c8962c; --crema:#fff6e5; --suave:#d9e8dc;
+  --ve-am:#f4c430; --ve-az:#1f3c96; --ve-ro:#cf1f2e;
+  --radio:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',sans-serif;color:var(--crema);line-height:1.55;background:var(--verde-noche);
+  background-image:
+    radial-gradient(circle at 10% 0%,#c8102e33 0,transparent 35%),
+    radial-gradient(circle at 90% 40%,#c8102e26 0,transparent 35%),
+    radial-gradient(circle at 50% 100%,#f2c14e1a 0,transparent 40%),
+    repeating-linear-gradient(45deg,#ffffff05 0 2px,transparent 2px 22px);
+  background-attachment:fixed;}
+img{max-width:100%;display:block}
+a{color:var(--oro)}
+.contenedor{max-width:1150px;margin:0 auto;padding:0 18px}
+.franja-ve{height:5px;background:linear-gradient(90deg,var(--ve-am) 0 33.3%,var(--ve-az) 33.3% 66.6%,var(--ve-ro) 66.6%)}
+.oculto{display:none!important}
+
+/* Avisos superiores */
+.aviso-prueba{background:var(--oro);color:#3a2500;text-align:center;font-size:.82rem;padding:5px 10px;font-weight:600}
+.aviso-estado{background:var(--rojo2);color:#fff;text-align:center;font-size:.9rem;padding:8px 10px;font-weight:600;border-bottom:1px solid var(--oro)}
+
+/* Cabecera */
+header{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,var(--rojo) 0%,var(--rojo2) 100%);box-shadow:0 4px 20px #0008}
+.cab{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:9px 18px;max-width:1150px;margin:0 auto}
+.marca{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff}
+.marca img{width:46px;height:46px;border-radius:50%;object-fit:cover;border:2px solid var(--oro);background:#fff}
+.marca b{font-family:'Playfair Display',serif;font-size:1.15rem;letter-spacing:.5px}
+.marca small{display:block;color:#ffe3b0;font-size:.72rem;margin-top:-3px}
+nav a{color:#fff;text-decoration:none;margin-left:18px;font-size:.92rem;opacity:.9}
+nav a:hover{color:var(--oro);opacity:1}
+.btn-carrito{position:relative;background:var(--verde);border:2px solid var(--oro);color:#fff;border-radius:999px;padding:8px 16px;font-weight:600;cursor:pointer;font-family:inherit;font-size:.9rem}
+.btn-carrito .contador{position:absolute;top:-9px;right:-9px;background:var(--oro);color:#3a2500;border-radius:999px;min-width:22px;height:22px;font-size:.75rem;display:flex;align-items:center;justify-content:center;font-weight:700}
+@media(max-width:760px){nav{display:none}}
+
+/* Guirnalda de luces */
+.guirnalda{position:relative;height:22px;overflow:hidden;background:var(--verde-noche)}
+.guirnalda::before{content:"";position:absolute;left:0;right:0;top:-14px;height:22px;border-bottom:2px solid #1d4d2c;border-radius:0 0 50% 50%/0 0 100% 100%}
+.guirnalda .luces{display:flex;justify-content:space-between;padding:0 6px}
+.bombilla{width:9px;height:13px;border-radius:50% 50% 50% 50%/40% 40% 60% 60%;margin-top:5px;animation:brillo 1.6s ease-in-out infinite alternate}
+.bombilla:nth-child(3n+1){background:var(--rojo);box-shadow:0 0 10px var(--rojo)}
+.bombilla:nth-child(3n+2){background:var(--oro);box-shadow:0 0 10px var(--oro);animation-delay:.5s}
+.bombilla:nth-child(3n){background:var(--verde-claro);box-shadow:0 0 10px var(--verde-claro);animation-delay:1s}
+@keyframes brillo{from{opacity:.35}to{opacity:1}}
+
+/* Portada */
+.portada{padding:34px 0 26px}
+.portada .rejilla{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
+.portada h1{font-family:'Great Vibes',cursive;font-weight:400;font-size:clamp(3rem,7vw,5.2rem);line-height:1;color:var(--oro);text-shadow:0 2px 18px #f2c14e55}
+.portada h1 span{display:block;color:#fff;font-size:.8em;margin-left:40px}
+.portada p.lema{font-size:1.08rem;color:var(--suave);margin:16px 0 18px;max-width:540px}
+.sellos{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px}
+.sello{border:1px solid #f2c14e88;border-radius:999px;padding:6px 14px;font-size:.82rem;background:#ffffff0d}
+.sello.oro{background:linear-gradient(135deg,var(--oro),var(--oro2));color:#3a2500;font-weight:600;border:none}
+.sello.rojo{background:var(--rojo);border-color:var(--oro);color:#fff}
+.btn{display:inline-block;border:none;border-radius:999px;padding:13px 26px;font-weight:600;font-family:inherit;font-size:1rem;cursor:pointer;text-decoration:none;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn:disabled{opacity:.5;cursor:not-allowed;transform:none}
+.btn-oro{background:linear-gradient(135deg,var(--oro),var(--oro2));color:#3a2500;box-shadow:0 6px 20px #f2c14e40}
+.btn-rojo{background:linear-gradient(135deg,var(--rojo),var(--rojo2));color:#fff;border:2px solid var(--oro)}
+.btn-linea{background:transparent;color:#fff;border:2px solid var(--oro);margin-left:8px}
+.btn-wa{background:#25d366;color:#06301a}
+.portada .cartel{border-radius:var(--radio);overflow:hidden;box-shadow:0 20px 60px #000a,0 0 0 3px var(--oro),0 0 0 7px var(--rojo2);transform:rotate(1.5deg);cursor:zoom-in}
+@media(max-width:860px){.portada .rejilla{grid-template-columns:1fr}.portada .cartel{max-width:420px;margin:0 auto;transform:none}.portada h1 span{margin-left:20px}}
+
+/* Cuenta atrás */
+.cuenta{background:linear-gradient(135deg,var(--rojo2),var(--rojo-noche));border:2px solid var(--oro);border-radius:var(--radio);padding:14px 16px;margin-bottom:22px;max-width:540px;position:relative}
+.cuenta::after{content:"🎀";position:absolute;top:-16px;right:16px;font-size:1.5rem}
+.cuenta .tit{font-size:.85rem;color:#ffe3b0;margin-bottom:8px}
+.cuenta .tit b{color:var(--oro)}
+.cuenta .cajas{display:flex;gap:8px}
+.cuenta .caja-t{flex:1;background:#00000040;border:1px solid #f2c14e55;border-radius:12px;text-align:center;padding:6px 4px}
+.cuenta .caja-t b{display:block;font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--oro);line-height:1.1}
+.cuenta .caja-t small{font-size:.7rem;color:#ffe3b0;text-transform:uppercase;letter-spacing:1px}
+
+/* Franja de frescura */
+.frescura{background:linear-gradient(90deg,var(--verde2),var(--verde));border-top:2px solid var(--oro);border-bottom:2px solid var(--oro)}
+.frescura .contenedor{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding-top:16px;padding-bottom:16px}
+.frescura div.dato{text-align:center;font-size:.85rem;color:#fff}
+.frescura div.dato b{display:block;color:var(--oro);font-size:1rem}
+@media(max-width:760px){.frescura .contenedor{grid-template-columns:1fr 1fr}}
+
+/* Secciones */
+section{padding:46px 0;scroll-margin-top:80px}
+.titulo-sec{text-align:center;margin-bottom:30px}
+.titulo-sec h2{font-family:'Great Vibes',cursive;font-weight:400;font-size:3rem;color:var(--oro);line-height:1.1}
+.titulo-sec h2::after{content:"";display:block;width:120px;height:3px;margin:6px auto 0;background:linear-gradient(90deg,var(--rojo),var(--oro),var(--verde-claro))}
+.titulo-sec p{color:var(--suave)}
+
+/* Productos */
+.productos{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:24px}
+.producto{background:linear-gradient(180deg,var(--verde) 0%,#082d19 100%);border:2px solid #f2c14e66;border-radius:var(--radio);overflow:hidden;display:flex;flex-direction:column;box-shadow:0 10px 30px #0006}
+.producto.destacado{border-color:var(--oro);box-shadow:0 0 0 3px var(--rojo2),0 10px 30px #0006}
+.producto .foto{aspect-ratio:1/1;overflow:hidden;cursor:zoom-in;position:relative;border-bottom:3px solid var(--rojo)}
+.producto .foto img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.producto .foto:hover img{transform:scale(1.04)}
+.cinta{position:absolute;top:14px;left:-6px;background:var(--rojo);color:#fff;font-weight:700;font-size:.78rem;padding:5px 14px;border:1px solid var(--oro);border-radius:0 6px 6px 0;box-shadow:0 3px 10px #0008}
+.producto .cuerpo{padding:18px 18px 20px;display:flex;flex-direction:column;gap:10px;flex:1}
+.producto h3{font-family:'Playfair Display',serif;font-size:1.35rem;color:var(--oro)}
+.producto .desc{font-size:.9rem;color:var(--suave)}
+.ingredientes{display:flex;flex-wrap:wrap;gap:6px}
+.ingredientes span{font-size:.72rem;border:1px solid #f2c14e44;border-radius:999px;padding:2px 9px;color:#fff;background:#ffffff0a}
+.variante{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 0;border-top:1px dashed #f2c14e33}
+.variante .nom{font-size:.92rem}
+.variante .nom small{display:block;color:var(--suave);font-size:.75rem}
+.precio{color:var(--oro);font-weight:700;white-space:nowrap;font-size:1.05rem}
+.cantidad{display:flex;align-items:center;border:2px solid var(--oro);border-radius:999px;overflow:hidden;background:#00000030}
+.cantidad button{background:transparent;border:none;color:#fff;width:34px;height:34px;font-size:1.15rem;cursor:pointer}
+.cantidad button:hover{background:var(--rojo)}
+.cantidad input{width:38px;text-align:center;background:transparent;border:none;color:#fff;font-family:inherit;font-weight:600;font-size:.95rem;-moz-appearance:textfield}
+.cantidad input::-webkit-outer-spin-button,.cantidad input::-webkit-inner-spin-button{-webkit-appearance:none}
+.agotado{opacity:.45;pointer-events:none}
+.etiqueta-agotado{font-size:.75rem;background:#555;color:#fff;border-radius:6px;padding:2px 8px}
+
+/* Galería */
+.galeria{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px}
+.galeria img{border-radius:12px;cursor:zoom-in;aspect-ratio:2/3;object-fit:cover;border:2px solid #f2c14e66;width:100%}
+
+/* Cómo pedir */
+.pasos{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px}
+.paso{background:linear-gradient(180deg,var(--verde),#082d19);border:2px solid #f2c14e55;border-radius:var(--radio);padding:20px;text-align:center}
+.paso .num{width:44px;height:44px;border-radius:50%;margin:0 auto 10px;background:var(--rojo);border:2px solid var(--oro);display:flex;align-items:center;justify-content:center;font-weight:700}
+.paso h4{color:var(--oro)}
+.paso p{font-size:.9rem;color:var(--suave)}
+
+/* Formulario */
+.form-pedido{display:grid;grid-template-columns:1.2fr .8fr;gap:26px;align-items:start}
+@media(max-width:860px){.form-pedido{grid-template-columns:1fr}}
+.panel{background:linear-gradient(180deg,var(--verde),#082d19);border:2px solid #f2c14e66;border-radius:var(--radio);padding:22px}
+.panel.rojo{background:linear-gradient(180deg,var(--rojo2),var(--rojo-noche));border-color:var(--oro)}
+.panel h3{font-family:'Playfair Display',serif;color:var(--oro);margin-bottom:14px}
+.campos{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.campos .ancho{grid-column:1/-1}
+@media(max-width:560px){.campos{grid-template-columns:1fr}}
+label{font-size:.82rem;color:var(--suave);display:block;margin-bottom:4px}
+label .ob{color:var(--oro)}
+input[type=text],input[type=tel],input[type=email],input[type=date],select,textarea{width:100%;min-height:46px;background:#03170b;border:1px solid #f2c14e66;border-radius:11px;padding:11px 12px;color:#fff;font-family:inherit;font-size:.95rem;box-sizing:border-box;color-scheme:dark}
+input[type=date]{appearance:none;-webkit-appearance:none;cursor:pointer;padding-right:48px;position:relative}
+input[type=date]::-webkit-calendar-picker-indicator{cursor:pointer;opacity:1;filter:invert(86%) sepia(54%) saturate(728%) hue-rotate(350deg) brightness(102%) contrast(91%);width:22px;height:22px;padding:4px}
+input[type=date]:focus,select:focus,textarea:focus,input[type=text]:focus,input[type=tel]:focus,input[type=email]:focus{outline:none;border-color:#f2c14e;box-shadow:0 0 0 3px #f2c14e22}
+/* Igualar exactamente la altura visual del calendario y los desplegables */
+#fechaOtra,#franja,#fecha{
+  height:50px;
+  min-height:50px;
+  padding-top:0;
+  padding-bottom:0;
+  line-height:50px;
+  vertical-align:middle;
+}
+#fechaOtra{padding-left:14px;padding-right:48px}
+#franja,#fecha{padding-left:14px;padding-right:42px}
+
+
+select option:disabled{color:#777}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--oro);box-shadow:0 0 0 3px #f2c14e33}
+textarea{resize:vertical;min-height:80px}
+.opciones{display:flex;gap:10px;flex-wrap:wrap}
+.opcion{flex:1;min-width:140px;border:1px solid #f2c14e44;border-radius:12px;padding:11px;cursor:pointer;display:flex;gap:8px;align-items:flex-start;font-size:.9rem;color:#fff;margin:0}
+.opcion input{margin-top:4px;accent-color:var(--oro)}
+.opcion small{display:block;color:var(--suave);font-size:.75rem}
+.opcion:has(input:checked){border-color:var(--oro);background:#c8102e40}
+.nota{font-size:.8rem;color:#ffe3b0;background:#c8102e2a;border-left:3px solid var(--oro);padding:8px 10px;border-radius:6px;margin-top:6px}
+.error{color:#ffb3b3;font-size:.78rem;margin-top:4px;display:none}
+.invalido .error{display:block}
+.invalido input,.invalido select{border-color:#ff8a8a}
+
+/* Resumen */
+.resumen-lista{list-style:none;margin-bottom:12px}
+.resumen-lista li{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px dashed #f2c14e33;font-size:.9rem}
+.resumen-lista li .quitar{background:none;border:none;color:#ffb3b3;cursor:pointer;margin-left:6px;font-size:.85rem}
+.resumen-vacio{color:var(--suave);font-size:.9rem;padding:10px 0}
+.linea-total{display:flex;justify-content:space-between;padding:4px 0;font-size:.92rem}
+.linea-total.grande{font-size:1.25rem;font-weight:700;color:var(--oro);border-top:1px solid #f2c14e77;margin-top:6px;padding-top:10px}
+.nota-pago{font-size:.78rem;color:#ffe3b0;margin-top:10px}
+.resumen-fijo{position:sticky;top:90px}
+.check{display:flex;gap:8px;align-items:flex-start;font-size:.82rem;color:#ffe3b0;margin-top:14px}
+.check input{margin-top:3px;accent-color:var(--oro)}
+
+/* Carrito lateral */
+.capa{position:fixed;inset:0;background:#000a;z-index:90;opacity:0;pointer-events:none;transition:opacity .25s}
+.capa.abierta{opacity:1;pointer-events:auto}
+.cajon{position:fixed;top:0;right:0;height:100%;width:min(400px,92vw);background:linear-gradient(180deg,var(--verde),var(--verde-noche));border-left:3px solid var(--oro);z-index:95;transform:translateX(105%);transition:transform .3s;display:flex;flex-direction:column;padding:20px}
+.cajon.abierto{transform:none}
+.cajon .cerrar{position:absolute;top:12px;right:14px;background:none;border:none;color:#fff;font-size:1.6rem;cursor:pointer}
+.cajon .lista{flex:1;overflow:auto;margin:14px 0}
+
+/* Visor */
+.visor{position:fixed;inset:0;background:#000e;z-index:120;display:none;align-items:center;justify-content:center;padding:20px;cursor:zoom-out}
+.visor.abierto{display:flex}
+.visor img{max-height:92vh;border-radius:12px;box-shadow:0 0 40px #000}
+
+/* Modal */
+.modal{position:fixed;inset:0;background:#000c;z-index:110;display:none;align-items:center;justify-content:center;padding:18px}
+.modal.abierto{display:flex}
+.modal .caja{background:linear-gradient(180deg,var(--verde),var(--verde-noche));border:3px solid var(--oro);border-radius:var(--radio);max-width:520px;width:100%;padding:26px;max-height:90vh;overflow:auto;text-align:center}
+.modal h3{font-family:'Great Vibes',cursive;font-weight:400;font-size:2.6rem;color:var(--oro)}
+.modal .num-pedido{display:inline-block;background:var(--rojo);border:2px dashed var(--oro);border-radius:10px;padding:6px 14px;font-weight:700;letter-spacing:1px;margin:8px 0 14px}
+.modal pre{text-align:left;white-space:pre-wrap;background:#03170b;border-radius:10px;padding:12px;font-family:inherit;font-size:.82rem;color:var(--suave);margin:12px 0}
+.modal .acciones{display:flex;flex-direction:column;gap:10px;margin-top:10px}
+
+.flotante{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);z-index:60;display:none;white-space:nowrap}
+@media(max-width:860px){.flotante.visible{display:block}}
+
+/* Pie */
+footer{background:linear-gradient(180deg,var(--rojo2),var(--rojo-noche));border-top:3px solid var(--oro);padding:30px 0 40px;text-align:center;color:#ffe3b0;font-size:.88rem}
+footer .redes{display:flex;justify-content:center;gap:12px;margin:12px 0;flex-wrap:wrap}
+footer .redes a,footer .redes span{border:1px solid var(--oro);border-radius:999px;padding:8px 16px;text-decoration:none;color:#fff}
+footer .version{font-size:.7rem;opacity:.6;margin-top:8px}
+
+/* Nieve */
+.nieve{position:fixed;inset:0;pointer-events:none;z-index:1;overflow:hidden}
+.copo{position:absolute;top:-10px;color:#fff;opacity:.55;animation:caer linear infinite}
+@keyframes caer{to{transform:translateY(105vh) rotate(360deg)}}
+main,header,footer,.frescura{position:relative;z-index:2}
+
+@media(max-width:600px){
+  .producto .foto{aspect-ratio:4/3}
+  .producto .foto img{object-position:center}
+  .cajon{top:auto;bottom:0;right:0;width:100%;height:min(78vh,650px);border-left:none;border-top:3px solid var(--oro);border-radius:22px 22px 0 0;transform:translateY(105%)}
+  .cajon.abierto{transform:translateY(0)}
+  .portada{padding-top:22px}
+  .portada .cartel{max-height:460px;max-width:360px}
+  .portada .cartel img{max-height:460px;width:100%;object-fit:cover}
+  .btn{min-height:48px}
+  .cantidad button{width:42px;height:42px}
+  .flotante{bottom:12px;width:calc(100% - 28px);text-align:center}
+}
+
+/* Ajustes compactos para escritorio */
+@media(min-width:861px){
+  .portada .rejilla{grid-template-columns:1.2fr .8fr;gap:30px}
+  .portada .cartel{max-width:340px;justify-self:center}
+  .productos{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;max-width:1050px;margin:0 auto}
+  .producto .foto{aspect-ratio:4/3}
+  .producto .cuerpo{padding:14px 15px 16px;gap:8px}
+  .producto h3{font-size:1.2rem}.producto .desc{font-size:.84rem}.variante{padding:8px 0}
+  .ingredientes{gap:4px}.ingredientes span{font-size:.62rem;padding:1px 7px}
+  .galeria{grid-template-columns:repeat(6,1fr);gap:10px;max-width:900px;margin:0 auto}
+  .galeria img{aspect-ratio:4/5}
+  .cuenta{max-width:470px;padding:10px 12px;margin-bottom:18px}
+  .cuenta .tit{font-size:.78rem;margin-bottom:6px}
+  .cuenta .cajas{gap:6px}
+  .cuenta .caja-t{padding:4px 3px}
+  .cuenta .caja-t b{font-size:1.45rem}
+  .cuenta .caja-t small{font-size:.62rem}
+}
+@media(min-width:600px) and (max-width:860px){
+  .productos{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.producto .foto{aspect-ratio:4/3}
+  .galeria{grid-template-columns:repeat(3,1fr);max-width:720px;margin:0 auto}
+}
+
+/* REVISION VISUAL FINAL */
+.btn-principal{margin:2px 0 16px}.microhistoria{display:flex;gap:11px;max-width:570px;margin-bottom:14px;padding:12px 14px;background:#ffffff0a;border-left:3px solid var(--oro);border-radius:0 12px 12px 0}.microhistoria-iconos{font-size:1.25rem;white-space:nowrap}.microhistoria-iconos span{color:var(--rojo)}.microhistoria strong{font-family:'Playfair Display',serif;color:var(--oro);font-size:.92rem}.microhistoria p{font-size:.76rem;color:var(--suave);line-height:1.45}.microhistoria a,.ayuda-wa{font-size:.74rem}.sellos-portada{margin-bottom:12px}.portada-visual{display:flex;flex-direction:column;align-items:center;gap:12px}.cuenta-compacta{width:100%;max-width:285px;margin:0;padding:8px 10px}.cuenta-compacta::after{display:none}.cuenta-compacta .caja-t b{font-size:1.15rem}.cuenta-compacta .caja-t small{font-size:.55rem}
+.producto .foto{aspect-ratio:4/3}.producto .foto img{width:100%;height:100%;object-fit:cover;object-position:center}.producto h3{font-size:1.15rem;line-height:1.25}.producto .desc{font-size:.83rem;line-height:1.55}.producto .variante{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:'info precio' 'control control';gap:6px 8px;padding:8px 0}.producto .nom{grid-area:info;font-size:.82rem}.producto .precio{grid-area:precio;font-size:.92rem}.control-carrito{grid-area:control;display:grid;grid-template-columns:86px 76px minmax(0,1fr);gap:5px;align-items:center;width:100%}.cantidad-seleccion{width:86px;height:30px;min-height:30px;border-width:1px;background:#062a18}.cantidad-seleccion button{width:27px;height:28px;font-size:.82rem}.cantidad-valor{min-width:28px;font-size:.76rem}.btn-agregar{width:76px;height:30px;min-height:30px;padding:4px 6px;border-width:1px;font-size:.62rem}.btn-agregar:disabled{background:#173d25;border-color:#8c7430;color:#c8c8b8;opacity:.72}.en-carrito{font-size:.58rem;color:#e4bc45}.continuar-pedido{max-width:760px;margin:26px auto 0;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;gap:15px;background:linear-gradient(135deg,var(--rojo2),var(--rojo-noche));border:2px solid var(--oro);border-radius:var(--radio)}.continuar-pedido div{display:flex;flex-direction:column}.continuar-pedido span{font-size:.78rem}
+.historia-editorial{position:relative;max-width:830px;margin:auto;padding:34px 42px 31px;text-align:center;background:linear-gradient(145deg,#0a3b22,#072a18);border:1px solid #f2c14e55}.historia-editorial p{max-width:680px;margin:0 auto 15px;font-family:'Libre Baskerville',serif;font-size:.9rem;line-height:1.85;color:#e2ebe4}.historia-editorial .historia-cierre{font-family:'Great Vibes',cursive;font-size:1.9rem;color:var(--oro)}.historia-volver{display:inline-block;margin-top:15px;padding:9px 15px;border:1px solid var(--oro);border-radius:999px;color:#fff;text-decoration:none;font-size:.72rem}
+.flotante{display:none;position:fixed;left:auto;right:18px;bottom:18px;transform:none;z-index:80;min-height:44px;padding:9px 15px;gap:8px;align-items:center}.flotante.visible{display:flex}.flotante-total{color:var(--oro);border-left:1px solid #f2c14e66;padding-left:8px}
+@media(min-width:861px){.portada .rejilla{grid-template-columns:1.42fr .58fr}.portada .cartel{max-width:285px}}
+@media(max-width:860px){.producto .foto{aspect-ratio:16/10}.historia-editorial p{text-align:left;font-size:.84rem;line-height:1.75}.historia-editorial .historia-cierre{text-align:center;font-size:1.65rem}.flotante{left:50%;right:auto;bottom:12px;transform:translateX(-50%);min-width:min(355px,calc(100% - 28px));justify-content:center}}
+@media(max-width:560px){.portada .cartel{max-width:340px}.portada .cartel img{height:auto;object-fit:contain}.producto .foto{aspect-ratio:16/10}.producto .cuerpo{padding:13px 15px 15px}.producto h3{font-size:1.05rem}.producto .desc{font-size:.78rem}.control-carrito{grid-template-columns:80px 72px minmax(0,1fr)}.cantidad-seleccion{width:80px;height:29px;min-height:29px}.cantidad-seleccion button{width:26px;height:27px}.btn-agregar{width:72px;height:29px;min-height:29px;font-size:.59rem}.historia .titulo-sec h2{font-size:2.55rem}.historia-editorial{padding:30px 22px 27px}.historia-volver{font-size:.68rem}.continuar-pedido{flex-direction:column;text-align:center}.continuar-pedido .btn{width:100%}}
+
+
+/* AJUSTE FINAL DE IDENTIDAD VISUAL */
+/* Tres familias solamente: Great Vibes, Playfair Display y Poppins */
+.historia-editorial p{
+  font-family:'Playfair Display',serif;
+  font-size:.88rem;
+  font-weight:600;
+  line-height:1.78;
+  letter-spacing:0;
+  color:#e6eee8;
+}
+.historia-editorial .historia-cierre{
+  font-family:'Great Vibes',cursive;
+  font-size:1.85rem;
+  font-weight:400;
+  line-height:1.3;
+}
+.historia-editorial .historia-volver{
+  font-family:'Poppins',sans-serif;
+}
+/* Microhistoria más ligera */
+.microhistoria{padding:10px 12px;gap:9px;background:#ffffff08}
+.microhistoria-iconos{font-size:1.05rem}
+.microhistoria strong{font-size:.86rem;font-weight:600}
+.microhistoria p{font-family:'Poppins',sans-serif;font-size:.7rem;line-height:1.42}
+.microhistoria a{font-family:'Poppins',sans-serif;font-size:.69rem}
+/* Recuperar botón dorado tipo burbuja */
+.btn-agregar{
+  width:auto;
+  min-width:78px;
+  height:30px;
+  min-height:30px;
+  padding:5px 12px;
+  border:1px solid var(--oro);
+  border-radius:999px;
+  background:linear-gradient(135deg,var(--oro),var(--oro2));
+  color:#3a2500;
+  font-family:'Poppins',sans-serif;
+  font-size:.64rem;
+  font-weight:700;
+  line-height:1;
+  box-shadow:0 3px 9px #f2c14e22;
+  cursor:pointer;
+}
+.btn-agregar:hover:not(:disabled){transform:translateY(-1px);box-shadow:0 5px 13px #f2c14e3d}
+.btn-agregar:disabled{
+  background:#173d25;
+  border-color:#8c7430;
+  color:#c8c8b8;
+  opacity:.68;
+  box-shadow:none;
+}
+.control-carrito{grid-template-columns:80px auto minmax(0,1fr);gap:7px}
+/* Un poco menos de altura fotográfica en móvil */
+@media(max-width:860px){
+  .producto .foto{aspect-ratio:16 / 9}
+  .historia-editorial p{font-size:.82rem;line-height:1.72;font-weight:600}
+  .microhistoria strong{font-size:.82rem}
+  .microhistoria p{font-size:.68rem}
+  .control-carrito{grid-template-columns:78px auto minmax(0,1fr);gap:6px}
+  .btn-agregar{min-width:76px;padding:5px 11px;font-size:.62rem}
+}
+@media(max-width:560px){
+  .producto .foto{aspect-ratio:16 / 9}
+  .historia-editorial p{font-size:.8rem;line-height:1.7}
+  .historia-editorial .historia-cierre{font-size:1.65rem}
+  .control-carrito{grid-template-columns:76px auto minmax(0,1fr);gap:6px}
+  .cantidad-seleccion{width:76px}
+  .btn-agregar{min-width:74px;height:29px;min-height:29px;padding:4px 10px;font-size:.6rem}
+}
+
+
+/* ================================================================
+   UNIFICACIÓN TIPOGRÁFICA Y CENTRADO DE CANTIDADES
+   Solo se utilizan Great Vibes para títulos decorativos y Poppins
+   para todo el contenido, productos, historia, botones y formularios.
+   ================================================================ */
+body,
+button,
+input,
+select,
+textarea,
+.producto h3,
+.producto .desc,
+.producto .nom,
+.producto .precio,
+.panel h3,
+.paso h4,
+.paso p,
+.historia-editorial p,
+.historia-volver,
+.microhistoria strong,
+.microhistoria p,
+.microhistoria a,
+.marca b,
+.cuenta,
+.btn,
+label,
+.nota,
+.opcion,
+.frescura,
+.sello{
+  font-family:'Poppins',sans-serif !important;
+}
+/* Los únicos textos decorativos de la web */
+.portada h1,
+.titulo-sec h2,
+.modal h3,
+.historia-editorial .historia-cierre{
+  font-family:'Great Vibes',cursive !important;
+  font-weight:400 !important;
+}
+/* Jerarquía uniforme */
+.producto h3{
+  font-size:1.08rem !important;
+  line-height:1.3 !important;
+  font-weight:700 !important;
+  color:var(--oro);
+}
+.panel h3,
+.paso h4{
+  font-size:1rem !important;
+  line-height:1.35 !important;
+  font-weight:700 !important;
+}
+.microhistoria strong{
+  font-size:.8rem !important;
+  line-height:1.35 !important;
+  font-weight:600 !important;
+}
+.historia-editorial p{
+  max-width:680px;
+  font-size:.88rem !important;
+  line-height:1.75 !important;
+  font-weight:400 !important;
+  letter-spacing:0 !important;
+  color:#e6eee8;
+}
+.historia-editorial .historia-cierre{
+  font-size:1.85rem !important;
+  line-height:1.3 !important;
+  color:var(--oro);
+}
+/* Centrado geométrico del selector */
+.cantidad-seleccion{
+  display:grid !important;
+  grid-template-columns:1fr 1fr 1fr !important;
+  align-items:center !important;
+  justify-items:center !important;
+  width:78px !important;
+  height:30px !important;
+  min-height:30px !important;
+  padding:0 !important;
+  overflow:hidden !important;
+}
+.cantidad-seleccion button{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  width:100% !important;
+  height:100% !important;
+  min-width:0 !important;
+  padding:0 !important;
+  margin:0 !important;
+  line-height:1 !important;
+  font-size:.8rem !important;
+}
+.cantidad-seleccion .cantidad-valor{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  width:100% !important;
+  min-width:0 !important;
+  height:100% !important;
+  padding:0 !important;
+  margin:0 !important;
+  line-height:1 !important;
+  text-align:center !important;
+  font-family:'Poppins',sans-serif !important;
+  font-size:.75rem !important;
+  font-weight:700 !important;
+  font-variant-numeric:tabular-nums;
+}
+.control-carrito{
+  grid-template-columns:78px auto minmax(0,1fr) !important;
+  align-items:center !important;
+}
+.btn-agregar{
+  min-width:76px !important;
+  height:30px !important;
+  min-height:30px !important;
+  border-radius:999px !important;
+  font-family:'Poppins',sans-serif !important;
+  font-size:.61rem !important;
+}
+@media(max-width:860px){
+  .historia-editorial p{
+    font-size:.82rem !important;
+    line-height:1.7 !important;
+    text-align:left;
+  }
+  .producto h3{font-size:1.03rem !important}
+  .microhistoria strong{font-size:.78rem !important}
+  .cantidad-seleccion{width:76px !important;height:29px !important;min-height:29px !important}
+  .control-carrito{grid-template-columns:76px auto minmax(0,1fr) !important}
+  .btn-agregar{min-width:74px !important;height:29px !important;min-height:29px !important}
+}
+@media(max-width:560px){
+  .historia .titulo-sec h2{font-size:2.45rem !important}
+  .historia-editorial p{font-size:.8rem !important;line-height:1.68 !important}
+  .historia-editorial .historia-cierre{font-size:1.6rem !important}
+  .producto h3{font-size:1rem !important}
+}
+
+
+/* PRUEBA COMPACTA: SIN CHIPS + SELECTOR ÚNICO DE PONCHE */
+.portada h1{
+  white-space:nowrap;
+  font-size:clamp(3rem,6vw,5.3rem);
+  line-height:1;
+}
+.portada h1 span{
+  display:inline;
+  margin-left:.16em;
+  font-size:inherit;
+  color:#fff;
+}
+.portada .lema{
+  max-width:760px;
+  font-size:.92rem;
+  line-height:1.48;
+}
+/* Al quitar chips, las cinco tarjetas ganan aire y reducen altura */
+.ingredientes{display:none !important}
+.producto .cuerpo{gap:7px}
+.producto .variantes{margin-top:auto}
+.ponche-selector{
+  padding-top:9px;
+  border-top:1px dashed #f2c14e44;
+}
+.selector-etiqueta{
+  display:block;
+  margin-bottom:5px;
+  color:#fff;
+  font-size:.72rem;
+  font-weight:600;
+}
+.selector-sabor{
+  width:100%;
+  height:34px;
+  padding:5px 32px 5px 11px;
+  border:1px solid var(--oro);
+  border-radius:999px;
+  background:#07351f;
+  color:#fff;
+  font-family:'Poppins',sans-serif;
+  font-size:.75rem;
+  cursor:pointer;
+}
+.ponche-detalle{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  margin:7px 1px 8px;
+  color:var(--suave);
+  font-size:.68rem;
+}
+.ponche-detalle strong{
+  color:var(--oro);
+  font-size:.9rem;
+}
+.control-ponche{margin-top:0}
+@media(max-width:860px){
+  .portada h1{
+    font-size:clamp(2.45rem,10vw,3.8rem);
+    white-space:nowrap;
+  }
+  .portada .lema{
+    font-size:.86rem;
+    line-height:1.45;
+  }
+  .selector-sabor{height:33px;font-size:.72rem}
+}
+@media(max-width:430px){
+  .portada h1{
+    font-size:clamp(2.15rem,10.5vw,2.85rem);
+    letter-spacing:-.02em;
+  }
+  .portada .lema{
+    font-size:.82rem;
+  }
+}
+
+
+/* Ajuste final del texto bajo Navidad en Madrid */
+.portada .lema{font-size:.84rem !important;line-height:1.42 !important;max-width:720px !important;}
+@media(max-width:860px){.portada .lema{font-size:.82rem !important;line-height:1.4 !important;}}
+
+
+/* Ocultar el acceso flotante al entrar en el formulario, solo en movil */
+@media(max-width:860px){
+  #flotante.oculto-formulario{
+    opacity:0 !important;
+    visibility:hidden !important;
+    pointer-events:none !important;
+    transform:translateX(-50%) translateY(18px) !important;
+  }
+  #flotante{
+    transition:opacity .22s ease, transform .22s ease, visibility .22s ease;
+  }
+}
+
+@media (prefers-reduced-motion:reduce){.nieve{display:none}.bombilla{animation:none}}
+
+/* Ajustes móvil */
+@media(max-width:560px){
+  .cab{padding:8px 12px}
+  .marca img{width:40px;height:40px}
+  .marca b{font-size:1rem}
+  .marca small{display:none}
+  .btn-carrito .txt{display:none}
+  .btn-carrito{padding:8px 14px;font-size:1.1rem}
+  input[type=text],input[type=tel],input[type=email],input[type=date],select,textarea{font-size:16px}
+  .portada h1{font-size:3.4rem}
+  .btn-linea{margin-left:0;margin-top:10px}
+  .portada .btn{width:100%;text-align:center}
+  .cuenta .caja-t b{font-size:1.5rem}
+  .titulo-sec h2{font-size:2.5rem}
+  .aviso-prueba,.aviso-estado{font-size:.78rem}
+  .flotante{width:calc(100% - 32px);text-align:center}
+}
+@media(max-width:860px){.resumen-fijo{position:static}}
+</style>
+</head>
+<body>
+
+<div class="nieve" id="nieve" aria-hidden="true"></div>
+
+<div id="avisoPrueba" class="aviso-prueba oculto">⚠️ MODO PRUEBA: los pedidos se pueden enviar aunque el periodo de pedidos no esté abierto.</div>
+<div id="avisoEstado" class="aviso-estado oculto"></div>
+
+<header>
+  <div class="cab">
+    <a href="#inicio" class="marca">
+      <img src="img/logo.jpg" alt="Logo Pasta D'Anna">
+      <div><b>PASTA D'ANNA</b><small>Navidad venezolana en Madrid</small></div>
+    </a>
+    <nav>
+      <a href="#productos">Productos</a>
+      <a href="#como-pedir">Cómo pedir</a>
+      <a href="#pedido">Hacer pedido</a>
+      <a href="#historia">Nuestra Historia</a>
+    </nav>
+    <button class="btn-carrito" id="btnCarrito" aria-label="Ver mi pedido">🛒<span class="txt"> Mi pedido</span> <span class="contador" id="contador">0</span></button>
+  </div>
+  <div class="franja-ve"></div>
+</header>
+<div class="guirnalda" aria-hidden="true"><div class="luces" id="luces"></div></div>
+
+<main>
+  <!-- PORTADA -->
+  <section class="portada" id="inicio">
+    <div class="contenedor rejilla">
+      <div>
+        <h1>Navidad<span>en Madrid</span></h1>
+        <p class="lema">Hallacas, pan de jamón, ponche crema y torta negra hechos en casa, con el sabor de la tradición venezolana. <b>¡Un pedacito de Venezuela en tu mesa!</b></p>
+
+        <a href="#productos" class="btn btn-oro btn-principal">🎄 Ver productos y pedir</a>
+        <div class="microhistoria">
+          <div class="microhistoria-iconos">🇮🇹 <span>♥</span> 🇻🇪</div>
+          <div><strong>Una historia entre Italia y Venezuela</strong><p>Pasta D'Anna nace de Anna, una italiana que encontró en Venezuela un segundo hogar y convirtió sus sabores en parte de su propia historia.</p><a href="#historia">Conoce nuestra historia →</a></div>
+        </div>
+        <div class="sellos sellos-portada"><span class="sello oro">🏅 5º lugar · Mejores hallacas de Madrid 2022</span><span class="sello rojo">✅ Mismos precios que en 2025</span></div>
+        <div class="ayuda-wa">¿Tienes alguna duda? <a href="#" id="btnWaPortada">Escríbenos por WhatsApp</a></div>
+      </div>
+      <div class="portada-visual">
+        <div class="cartel" data-zoom="img/cartel-navidad.jpg"><img src="img/cartel-navidad.jpg" alt="Cartel Navidad en Madrid - Pasta D'Anna"></div>
+        <div class="cuenta cuenta-compacta" id="cuenta"><div class="tit" id="cuentaTitulo">⏳ Pedidos hasta el <b>17 de diciembre</b></div><div class="cajas"><div class="caja-t"><b id="cDias">00</b><small>Días</small></div><div class="caja-t"><b id="cHoras">00</b><small>Horas</small></div><div class="caja-t"><b id="cMin">00</b><small>Min</small></div><div class="caja-t"><b id="cSeg">00</b><small>Seg</small></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FRESCURA -->
+  <div class="frescura">
+    <div class="contenedor">
+      <div class="dato"><b>🌿 Siempre frescos</b>Nunca trabajamos con productos congelados</div>
+      <div class="dato"><b>⏰ 48 h de antelación</b>Pedido mínimo con 48 horas</div>
+      <div class="dato"><b>📅 Pedidos</b><span id="txtPeriodo">15 oct – 17 dic</span></div>
+      <div class="dato"><b>📍 Recogida</b>Sanchinarro · fecha y horario según pedido</div>
+    </div>
+  </div>
+
+  <!-- PRODUCTOS -->
+  <section id="productos">
+    <div class="contenedor">
+      <div class="titulo-sec">
+        <h2>Nuestros sabores navideños</h2>
+        <p>Elige la cantidad de cada producto. Tu pedido se va sumando automáticamente.</p>
+      </div>
+      <div class="productos" id="listaProductos"></div><div class="continuar-pedido oculto" id="continuarPedido"><div><strong>Tu pedido ya tiene productos</strong><span id="resumenContinuar"></span></div><a href="#pedido" class="btn btn-oro">Continuar con mis datos →</a></div>
+    </div>
+  </section>
+
+  <!-- CÓMO PEDIR -->
+  <section id="como-pedir">
+    <div class="contenedor">
+      <div class="titulo-sec"><h2>¿Cómo hacer tu pedido?</h2></div>
+      <div class="pasos">
+        <div class="paso"><div class="num">1</div><h4>Elige</h4><p>Selecciona productos y cantidades.</p></div>
+        <div class="paso"><div class="num">2</div><h4>Completa tus datos</h4><p>Elige entre recogida para Nochebuena y Navidad, o recogida en otra fecha con horario a convenir.</p></div>
+        <div class="paso"><div class="num">3</div><h4>Envía por WhatsApp</h4><p>Se abrirá WhatsApp con tu pedido ya escrito. Solo pulsa enviar.</p></div>
+        <div class="paso"><div class="num">4</div><h4>Confirmación</h4><p>Te confirmamos el pedido, el horario cuando corresponda y los detalles del pago.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NUESTRA HISTORIA -->
+  <section id="historia" class="historia"><div class="contenedor"><div class="titulo-sec"><h2>Nuestra Historia</h2><p>Tradición italiana, corazón venezolano.</p></div><div class="historia-tarjeta historia-editorial"><div class="historia-simbolo">🇮🇹 <span>♥</span> 🇻🇪</div><p>Pasta D'Anna nace de la historia de Anna, una italiana que encontró en Venezuela un segundo hogar. Allí compartió con su familia el amor por la cocina, las tradiciones y esos sabores que reúnen a las personas alrededor de una mesa.</p><p>Con el tiempo, Anna también hizo suyo el sabor de la Navidad venezolana. Por eso, cuando llega diciembre, en Pasta D'Anna nuestra cocina cambia de acento, pero nunca de corazón.</p><p class="historia-cierre">Porque los sabores también cuentan historias.</p><a href="#productos" class="historia-volver">↑ Volver a productos y continuar el pedido</a></div></div></section>
+
+  <!-- FORMULARIO -->
+  <section id="pedido">
+    <div class="contenedor">
+      <div class="titulo-sec"><h2>Hacer pedido</h2><p>Los campos con <span style="color:var(--oro)">*</span> son obligatorios.</p></div>
+      <form class="form-pedido" id="formPedido" novalidate>
+        <div class="panel">
+          <h3>Tus datos</h3>
+          <div class="campos">
+            <div class="ancho" data-campo="nombre">
+              <label for="nombre">Nombre y apellidos <span class="ob">*</span></label>
+              <input type="text" id="nombre" autocomplete="name" maxlength="80">
+              <div class="error">Escribe tu nombre.</div>
+            </div>
+            <div data-campo="telefono">
+              <label for="telefono">Teléfono / WhatsApp <span class="ob">*</span></label>
+              <input type="tel" id="telefono" autocomplete="tel" placeholder="600 000 000" maxlength="20">
+              <div class="error">Escribe un teléfono válido.</div>
+            </div>
+            <div data-campo="email">
+              <label for="email">Correo electrónico (opcional)</label>
+              <input type="email" id="email" autocomplete="email" maxlength="80">
+              <div class="error">El correo no parece válido.</div>
+            </div>
+
+            <div class="ancho">
+              <label>Tipo de recogida <span class="ob">*</span></label>
+              <div class="opciones">
+                <label class="opcion"><input type="radio" name="entrega" value="Recogida Nochebuena y Navidad" checked><span>🎄 Nochebuena y Navidad<small>19, 20, 21 o 22 de diciembre, con franjas horarias disponibles.</small></span></label>
+                <label class="opcion"><input type="radio" name="entrega" value="Recogida en otra fecha"><span>📅 Otra fecha<small>Del 15 de octubre al 18 de diciembre, con horario a convenir por WhatsApp.</small></span></label>
+              </div>
+            </div>
+
+            <div data-campo="fecha">
+              <label for="fecha">Fecha de recogida <span class="ob">*</span></label>
+              <select id="fecha"></select>
+              <input type="date" id="fechaOtra" class="oculto" min="2026-10-15" max="2026-12-18">
+              <div class="error">Elige una fecha disponible con al menos 48 horas de antelación.</div>
+            </div>
+            <div data-campo="franja">
+              <label for="franja">Franja horaria de recogida <span class="ob">*</span></label>
+              <select id="franja"></select>
+              <div class="error">Elige una franja.</div>
+            </div>
+            <div class="ancho"><div class="nota">⏰ Todos los pedidos requieren un mínimo de <b>48 horas de antelación</b>. Para otras fechas, el calendario permite elegir del 15 de octubre al 18 de diciembre, respetando siempre 48 horas de antelación. El horario se acordará por WhatsApp.</div></div>
+            <div class="ancho"><div class="nota">💳 <b>Detalles del pago:</b> se confirmarán en la conversación de WhatsApp al confirmar el pedido.</div></div>
+
+            <div class="ancho">
+              <label for="notas">Comentarios (alergias o indicaciones adicionales)</label>
+              <textarea id="notas" maxlength="500" placeholder="Ej. Sin Pasas / Sin Tocineta / Sin Almendras"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel rojo resumen-fijo">
+          <h3>🎁 Resumen del pedido</h3>
+          <ul class="resumen-lista" id="resumenForm"></ul>
+          <div class="linea-total"><span>Subtotal productos</span><span id="subtotal">0,00 €</span></div>
+          <div class="linea-total grande"><span id="txtTotal">Total</span><span id="total">0,00 €</span></div>
+          <div class="error" id="errorCarrito">Añade al menos un producto.</div>
+          <div class="error" id="errorPeriodo"></div>
+          <button type="submit" class="btn btn-wa" style="width:100%;margin-top:16px" id="btnEnviar">📲 Enviar pedido por WhatsApp</button>
+          <p class="nota-pago" id="notaPago">Los detalles del pago se confirmarán por WhatsApp.</p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="contenedor">
+    <img src="img/logo.jpg" alt="Pasta D'Anna" style="width:90px;border-radius:50%;margin:0 auto 10px;border:3px solid var(--oro)">
+    <div class="redes">
+      <a href="https://www.instagram.com/pastadanna" target="_blank" rel="noopener">📷 @pastadanna</a>
+      <a href="#" id="btnWaPie" target="_blank" rel="noopener">💬 WhatsApp</a>
+      <span>📍 Madrid</span>
+    </div>
+    <p>© <span id="anio"></span> Pasta D'Anna · ¡Tradición que nos une!</p>
+    <p style="margin-top:8px;color:#fff">Desarrollado por Giuseppe Graziano para Pasta D'Anna - 2026</p>
+  </div>
+</footer>
+
+<!-- Carrito lateral -->
+<div class="capa" id="capa"></div>
+<aside class="cajon" id="cajon" aria-label="Mi pedido">
+  <button class="cerrar" id="cerrarCajon" aria-label="Cerrar">×</button>
+  <h3 style="font-family:'Playfair Display',serif;color:var(--oro)">🎁 Mi pedido</h3>
+  <ul class="resumen-lista lista" id="resumenCajon"></ul>
+  <div class="linea-total grande"><span>Subtotal</span><span id="subtotalCajon">0,00 €</span></div>
+  <a href="#pedido" class="btn btn-oro" id="irAPedido" style="text-align:center;margin-top:14px">Continuar con el pedido</a>
+</aside>
+
+<a href="#pedido" class="btn btn-rojo flotante" id="flotante"><span>🛒</span><span>Completar pedido</span><span class="flotante-total" id="totalFlotante">0,00 €</span></a>
+
+<div class="visor" id="visor"><img id="visorImg" alt=""></div>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true">
+  <div class="caja">
+    <h3>¡Gracias!</h3>
+    <p>Tu número de pedido es:</p>
+    <div class="num-pedido" id="numPedido"></div>
+    <p style="font-size:.9rem;color:var(--suave)">Si WhatsApp no se abrió, pulsa el botón verde. <b>El pedido queda confirmado cuando te respondamos.</b></p>
+    <pre id="textoPedido"></pre>
+    <div class="acciones">
+      <a class="btn btn-wa" id="btnReabrirWa" target="_blank" rel="noopener">📲 Abrir WhatsApp con mi pedido</a>
+      <button class="btn btn-linea" style="margin:0" id="btnCopiar">📋 Copiar texto del pedido</button>
+      <button class="btn btn-linea" style="margin:0" id="btnNuevo">Hacer otro pedido</button>
+    </div>
+  </div>
+</div>
+
+<script>
+/* =====================================================================
+   CONFIGURACIÓN — EDITA SOLO ESTA PARTE
+   ===================================================================== */
+const CONFIG = {
+  // true = permite enviar pedidos de prueba fuera del periodo. Ponlo en false al publicar.
+  modoPrueba: true,
+
+  // WhatsApp que recibe los pedidos (prefijo de país, sin + ni espacios)
+  whatsapp: "34679672727",
+
+  // URL de Google Apps Script para guardar pedidos en Google Sheets ("" = solo WhatsApp)
+  urlGoogleSheets: "https://script.google.com/macros/s/AKfycbzFboBDOqghg20kXOScGOrKo5_LhEbs7QFEWeQyQ3vjDraS7_tSIJFmgHaXz9VOFQSa/exec",
+
+  // Periodo de pedidos (hora de Madrid)
+  aperturaPedidos: "2026-10-15T00:00:00+02:00",
+  cierrePedidos:   "2026-12-17T23:59:59+01:00",
+
+  // Antelación mínima en horas
+  antelacionHoras: 48,
+
+  // Días de entrega (AAAA-MM-DD)
+  fechasEntrega: ["2026-12-19", "2026-12-20", "2026-12-21", "2026-12-22"],
+  fechaMaximaOtraRecogida: "2026-12-31",
+
+  // Franjas según forma de entrega
+  franjasFinDeSemana: ["10:00 - 11:00", "11:00 - 12:00", "12:00 - 13:00"],
+  franjasLaborables: ["10:00 - 11:00", "11:00 - 12:00", "12:00 - 13:00", "13:00 - 14:00", "14:00 - 15:00", "15:00 - 16:00", "16:00 - 17:00", "17:00 - 18:00", "18:00 - 19:00"],
+
+
+  // PRODUCTOS. disponible:false => aparece como "Agotado"
+  productos: [
+    {
+      id: "hallaca", nombre: "Hallacas Venezolanas", imagen: "img/hallacas.jpg", cinta: "🏆 5º Lugar Madrid 2022<br>✅ Mismo precio que en 2025",
+      descripcion: "Envueltas en hoja de plátano, con el mejor relleno tradicional.",
+      ingredientes: ["Ternera","Cerdo","Pollo","Puerro","Ají dulce","Cebolla verde","Aceituna","Alcaparra","Cebolla","Pimiento","Almendra","Bacon"],
+      variantes: [ { id:"hallaca-ud", nombre:"Hallaca", detalle:"Por unidad", precio: 9.50, disponible:true } ]
+    },
+    {
+      id: "pan", nombre: "Pan de jamón venezolano", imagen: "img/pan-de-jamon.jpg",
+      descripcion: "Jamón, bacon, aceitunas y pasas, con ese rico sabor ahumado que nos recuerda nuestra tradición.",
+      ingredientes: ["Jamón","Bacon","Aceitunas","Pasas"],
+      variantes: [ { id:"pan-ud", nombre:"Pan de jamón", detalle:"Aprox. 38 - 40 cm", precio: 25.00, disponible:true } ]
+    },
+    {
+      id: "ponche", nombre: "Ponche crema", imagen: "img/ponche-sabores.jpg",
+      descripcion: "El sabor de la Navidad en cada sorbo. Tradicional, pistacho y Nutella.",
+      ingredientes: [],
+      variantes: [
+        { id:"ponche-trad-1l", nombre:"Tradicional", detalle:"1 litro", precio: 24.00, disponible:true },
+        { id:"ponche-pist-1l", nombre:"Pistacho",    detalle:"1 litro", precio: 26.00, disponible:true },
+        { id:"ponche-nut-1l",  nombre:"Nutella",     detalle:"1 litro", precio: 26.00, disponible:true }
+      ]
+    },
+    {
+      id: "torta", nombre: "Torta negra navideña", imagen: "img/torta-negra.jpg",
+      descripcion: "El sabor de la tradición en cada bocado. Con frutas confitadas y nueces pecanas.",
+      ingredientes: [],
+      variantes: [ { id:"torta-16", nombre:"Torta negra", detalle:"16 cm · 6 porciones", precio: 35.00, disponible:true } ]
+    },
+    {
+      id: "pack", nombre: "Pack Celebración", imagen: "img/ponche-torta.jpg", cinta: "🎁 Pack", destacado: true,
+      descripcion: "Torta negra de 16 cm (6 porciones) + Ponche Crema tradicional de 1/2 litro. ¡El regalo perfecto!",
+      ingredientes: ["Torta negra 6 porciones","Ponche tradicional 1/2 L"],
+      variantes: [ { id:"pack-celebracion", nombre:"Pack Celebración", detalle:"Torta + Ponche Crema 1/2 L", precio: 45.00, disponible:true } ]
+    }
+  ]
+};
+/* ===================================================================== */
+
+const $ = s => document.querySelector(s);
+const $$ = s => document.querySelectorAll(s);
+const euro = n => n.toLocaleString("es-ES",{minimumFractionDigits:2,maximumFractionDigits:2}) + " €";
+const CLAVE = "pastadanna_carrito_v1";
+const APERTURA = new Date(CONFIG.aperturaPedidos);
+const CIERRE = new Date(CONFIG.cierrePedidos);
+const fechaTexto = (iso, conDia=true) => new Date(iso+"T12:00:00").toLocaleDateString("es-ES", conDia?{weekday:"long",day:"numeric",month:"long"}:{day:"numeric",month:"long"});
+const capital = s => s.charAt(0).toUpperCase()+s.slice(1);
+
+const VARIANTES = {};
+CONFIG.productos.forEach(p => p.variantes.forEach(v => VARIANTES[v.id] = {...v, producto:p.nombre}));
+
+let carrito = {};
+try { carrito = JSON.parse(localStorage.getItem(CLAVE)) || {}; } catch(e){ carrito = {}; }
+Object.keys(carrito).forEach(k => { if(!VARIANTES[k]) delete carrito[k]; });
+const seleccion = {}; Object.keys(VARIANTES).forEach(id => seleccion[id]=0);
+const saboresElegidos = {ponche:"ponche-trad-1l"};
+function guardar(){ try{ localStorage.setItem(CLAVE, JSON.stringify(carrito)); }catch(e){} }
+
+/* ---------- Estado del periodo de pedidos ---------- */
+function estadoPeriodo(){
+  const ahora = new Date();
+  if(ahora < APERTURA) return "antes";
+  if(ahora > CIERRE) return "cerrado";
+  return "abierto";
+}
+function puedePedir(){ return estadoPeriodo()==="abierto" || CONFIG.modoPrueba; }
+
+function pintarEstado(){
+  const e = estadoPeriodo(), av = $("#avisoEstado");
+  if(e==="antes"){
+    av.textContent = `🎄 Los pedidos de Navidad se abren el ${fechaTexto(CONFIG.aperturaPedidos.slice(0,10),false)}. ¡Ya puedes ir preparando tu lista!`;
+    av.classList.remove("oculto");
+  } else if(e==="cerrado"){
+    av.textContent = "🎄 Los pedidos de Navidad están cerrados. ¡Gracias por confiar en Pasta D'Anna! Escríbenos por WhatsApp para cualquier consulta.";
+    av.classList.remove("oculto");
+  } else av.classList.add("oculto");
+  $("#txtPeriodo").textContent = `${fechaTexto(CONFIG.aperturaPedidos.slice(0,10),false)} – ${fechaTexto(CONFIG.cierrePedidos.slice(0,10),false)}`;
+  $("#btnEnviar").disabled = !puedePedir();
+  $("#errorPeriodo").textContent = e==="antes" ? "Los pedidos se abren el " + fechaTexto(CONFIG.aperturaPedidos.slice(0,10),false) + "." : e==="cerrado" ? "El periodo de pedidos ha terminado." : "";
+  $("#errorPeriodo").style.display = (!puedePedir()) ? "block" : "none";
+}
+
+/* ---------- Cuenta atrás ---------- */
+function cuentaAtras(){
+  const dif = CIERRE - new Date();
+  const p = n => String(n).padStart(2,"0");
+  if(dif<=0){
+    $("#cuentaTitulo").innerHTML = "🎄 <b>Pedidos cerrados</b> · ¡Feliz Navidad!";
+    ["#cDias","#cHoras","#cMin","#cSeg"].forEach(s=>$(s).textContent="00");
+    return;
+  }
+  const s = Math.floor(dif/1000);
+  $("#cDias").textContent = p(Math.floor(s/86400));
+  $("#cHoras").textContent = p(Math.floor(s%86400/3600));
+  $("#cMin").textContent = p(Math.floor(s%3600/60));
+  $("#cSeg").textContent = p(s%60);
+}
+
+/* ---------- Productos ---------- */
+function pintarProductos(){
+  $("#listaProductos").innerHTML = CONFIG.productos.map(p => `
+    <article class="producto ${p.destacado?"destacado":""}">
+      <div class="foto" data-zoom="${p.imagen}"><img src="${p.imagen}" alt="${p.nombre}" loading="lazy">${p.cinta?`<span class="cinta">${p.cinta}</span>`:""}</div>
+      <div class="cuerpo">
+        <h3>${p.nombre}</h3>
+        <p class="desc">${p.descripcion}</p>
+        <div style="margin-top:auto">
+        ${p.id==="ponche" ? (()=>{
+          const elegido=p.variantes.find(v=>v.id===(saboresElegidos[p.id]||p.variantes[0].id))||p.variantes[0];
+          return `<div class="ponche-selector">
+            <label class="selector-etiqueta" for="saborPonche">Elige el sabor</label>
+            <select id="saborPonche" class="selector-sabor" data-selector-sabor="ponche">
+              ${p.variantes.map(v=>`<option value="${v.id}" ${v.id===elegido.id?"selected":""}>${v.nombre} · ${euro(v.precio)}</option>`).join("")}
+            </select>
+            <div class="ponche-detalle"><span>Botella de ${elegido.detalle}</span><strong>${euro(elegido.precio)}</strong></div>
+            <div class="control-carrito control-ponche" data-id="${elegido.id}"><div class="cantidad cantidad-seleccion" data-id="${elegido.id}"><button type="button" data-seleccion="-">−</button><span class="cantidad-valor">${seleccion[elegido.id]||0}</span><button type="button" data-seleccion="+">+</button></div><button type="button" class="btn-agregar" data-agregar="${elegido.id}" ${(seleccion[elegido.id]||0)===0?"disabled":""}>Agregar</button><small class="en-carrito">${carrito[elegido.id]?`En el pedido: ${carrito[elegido.id]}`:""}</small></div>
+          </div>`;
+        })() : p.variantes.map(v => `
+          <div class="variante ${v.disponible?"":"agotado"}">
+            <div class="nom">${v.nombre}<small>${v.detalle}</small></div>
+            <div class="precio">${euro(v.precio)}</div>
+            ${v.disponible ? `<div class="control-carrito" data-id="${v.id}"><div class="cantidad cantidad-seleccion" data-id="${v.id}"><button type="button" data-seleccion="-">−</button><span class="cantidad-valor">${seleccion[v.id]||0}</span><button type="button" data-seleccion="+">+</button></div><button type="button" class="btn-agregar" data-agregar="${v.id}" ${(seleccion[v.id]||0)===0?"disabled":""}>Agregar</button><small class="en-carrito">${carrito[v.id]?`En el pedido: ${carrito[v.id]}`:""}</small></div>` : `<span class="etiqueta-agotado">Agotado</span>`}
+          </div>`).join("")}
+        </div>
+      </div>
+    </article>`).join("");
+}
+
+function fijarCantidad(id, n){
+  n = Math.max(0, Math.min(999, parseInt(n)||0));
+  if(n>0) carrito[id]=n; else delete carrito[id];
+  guardar(); pintarProductos(); actualizar();
+}
+
+const esDomicilio = () => false;
+const descripcion = v => `${v.producto}${v.producto.includes(v.nombre)?"":" "+v.nombre} (${v.detalle})`;
+
+function calcular(){
+  const ls = Object.entries(carrito).map(([id,c]) => ({id, c, v:VARIANTES[id], importe:VARIANTES[id].precio*c}));
+  const subtotal = ls.reduce((a,l)=>a+l.importe,0);
+  return {ls, subtotal, domicilio: esDomicilio(), total: subtotal, unidades: ls.reduce((a,l)=>a+l.c,0)};
+}
+
+function htmlLista(ls){
+  if(!ls.length) return `<li class="resumen-vacio">Aún no has elegido productos.</li>`;
+  return ls.map(l=>`<li><span>${l.c} × ${l.v.producto}${l.v.producto.includes(l.v.nombre)?"":" "+l.v.nombre} <small style="color:var(--suave)">(${l.v.detalle})</small></span>
+    <span style="white-space:nowrap">${euro(l.importe)}<button type="button" class="quitar" data-quitar="${l.id}" aria-label="Quitar">✕</button></span></li>`).join("");
+}
+
+function actualizar(){
+  const r = calcular();
+  $("#contador").textContent = r.unidades;
+  $("#resumenForm").innerHTML = htmlLista(r.ls);
+  $("#resumenCajon").innerHTML = htmlLista(r.ls);
+  $("#subtotal").textContent = euro(r.subtotal);
+  $("#subtotalCajon").textContent = euro(r.subtotal);
+  
+  $("#txtTotal").textContent = r.domicilio ? "Total (sin envío)" : "Total";
+  $("#total").textContent = euro(r.total);
+  $("#totalFlotante").textContent = euro(r.total);
+  $("#flotante").classList.toggle("visible", r.unidades>0); $("#continuarPedido").classList.toggle("oculto",r.unidades===0); $("#resumenContinuar").textContent=r.unidades?`${r.unidades} ${r.unidades===1?"unidad":"unidades"} · ${euro(r.total)}`:"";
+  if(r.unidades>0) $("#errorCarrito").style.display="none";
+}
+
+/* ---------- Eventos ---------- */
+document.addEventListener("click", e => {
+  const selector=e.target.closest("[data-seleccion]"); if(selector){const id=selector.closest(".cantidad-seleccion").dataset.id; seleccion[id]=Math.max(0,Math.min(99,(seleccion[id]||0)+(selector.dataset.seleccion==="+"?1:-1))); pintarProductos(); return;} const agregar=e.target.closest("[data-agregar]"); if(agregar){const id=agregar.dataset.agregar,cantidad=seleccion[id]||0;if(cantidad>0){carrito[id]=(carrito[id]||0)+cantidad;seleccion[id]=0;guardar();pintarProductos();actualizar();}return;}
+  const q = e.target.closest("[data-quitar]");
+  if(q) fijarCantidad(q.dataset.quitar, 0);
+  const z = e.target.closest("[data-zoom]");
+  if(z){ $("#visorImg").src = z.dataset.zoom; $("#visor").classList.add("abierto"); }
+});
+document.addEventListener("change", e => {
+  const selector=e.target.closest("[data-selector-sabor]");
+  if(selector){ saboresElegidos[selector.dataset.selectorSabor]=selector.value; pintarProductos(); }
+});
+$("#visor").onclick = () => $("#visor").classList.remove("abierto");
+
+const abrirCajon = a => { $("#cajon").classList.toggle("abierto",a); $("#capa").classList.toggle("abierta",a); };
+$("#btnCarrito").onclick = () => abrirCajon(true);
+$("#cerrarCajon").onclick = $("#capa").onclick = $("#irAPedido").onclick = () => abrirCajon(false);
+document.addEventListener("keydown", e => { if(e.key==="Escape"){ abrirCajon(false); $("#visor").classList.remove("abierto"); }});
+
+/* ---------- Fechas y franjas ---------- */
+function fechaDisponible(iso){
+  // Disponible si faltan al menos X horas para el inicio del día de entrega
+  const inicioDia = new Date(iso+"T09:00:00+01:00");
+  return (inicioDia - new Date()) >= CONFIG.antelacionHoras*3600*1000;
+}
+function esRecogidaNavidad(){
+  const elegido = document.querySelector('input[name=entrega]:checked');
+  return !elegido || elegido.value === "Recogida Nochebuena y Navidad";
+}
+function isoLocal(fecha){
+  const y = fecha.getFullYear();
+  const m = String(fecha.getMonth()+1).padStart(2,"0");
+  const d = String(fecha.getDate()).padStart(2,"0");
+  return `${y}-${m}-${d}`;
+}
+function primeraFechaOtraRecogida(){
+  const limite48h = new Date(Date.now() + CONFIG.antelacionHoras*3600*1000);
+  limite48h.setHours(12,0,0,0);
+  const apertura = new Date("2026-10-15T12:00:00");
+  return isoLocal(limite48h > apertura ? limite48h : apertura);
+}
+function fechaSeleccionada(){
+  return esRecogidaNavidad() ? $("#fecha").value : $("#fechaOtra").value;
+}
+function pintarFechas(){
+  const navidad = esRecogidaNavidad();
+  $("#fecha").classList.toggle("oculto", !navidad);
+  $("#fechaOtra").classList.toggle("oculto", navidad);
+  if(navidad){
+    const actual = $("#fecha").value;
+    $("#fecha").innerHTML = `<option value="">Selecciona…</option>` + CONFIG.fechasEntrega.map(f => {
+      const ok = fechaDisponible(f);
+      return `<option value="${f}" ${ok?"":"disabled"} ${ok&&f===actual?"selected":""}>${capital(fechaTexto(f))}${ok?"":" (no disponible)"}</option>`;
+    }).join("");
+  } else {
+    const minimo = primeraFechaOtraRecogida();
+    $("#fechaOtra").min = minimo;
+    $("#fechaOtra").max = "2026-12-18";
+    const valor = $("#fechaOtra").value;
+    if(valor && (valor < minimo || valor > "2026-12-18" || CONFIG.fechasEntrega.includes(valor))) $("#fechaOtra").value = "";
+  }
+}
+function pintarFranjas(){
+  if(!esRecogidaNavidad()){
+    $("#franja").innerHTML = `<option value="A convenir por WhatsApp" selected>A convenir por WhatsApp</option>`;
+    return;
+  }
+  const fecha = $("#fecha").value;
+  const esLunesOMartes = fecha === "2026-12-21" || fecha === "2026-12-22";
+  const lista = esLunesOMartes ? CONFIG.franjasLaborables : CONFIG.franjasFinDeSemana;
+  $("#franja").innerHTML = `<option value="">Selecciona…</option>` + lista.map(f=>`<option>${f}</option>`).join("");
+}
+function prepararFormulario(){
+  pintarFechas(); pintarFranjas();
+  $("#notaPago").textContent = "Los detalles del pago se confirmarán por WhatsApp.";
+  const linkWa = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent("¡Hola Pasta D'Anna! Quisiera información sobre los productos de Navidad 🎄")}`;
+  $("#btnWaPortada").href = linkWa; $("#btnWaPortada").target="_blank";
+  $("#btnWaPie").href = linkWa;
+  $("#anio").textContent = new Date().getFullYear();
+  if(CONFIG.modoPrueba) $("#avisoPrueba").classList.remove("oculto");
+}
+
+
+
+
+$("#fecha").addEventListener("change", pintarFranjas);
+$("#fechaOtra").addEventListener("change", pintarFranjas);
+$$('input[name=entrega]').forEach(r => r.addEventListener("change", () => { pintarFechas(); pintarFranjas(); }));
+
+function marcar(campo, ok){ const el = document.querySelector(`[data-campo="${campo}"]`); if(el) el.classList.toggle("invalido", !ok); return ok; }
+
+function validar(r){
+  const tel = $("#telefono").value.replace(/[\s\-\.()]/g,"");
+  const email = $("#email").value.trim();
+  let ok = true;
+  ok = marcar("nombre", $("#nombre").value.trim().length>=3) && ok;
+  ok = marcar("telefono", /^\+?\d{9,15}$/.test(tel)) && ok;
+  ok = marcar("email", !email || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) && ok;
+  const fechaElegida = fechaSeleccionada();
+  const fechaOtraValida = esRecogidaNavidad() || (fechaElegida >= primeraFechaOtraRecogida() && fechaElegida <= "2026-12-18" && !CONFIG.fechasEntrega.includes(fechaElegida));
+  ok = marcar("fecha", !!fechaElegida && fechaDisponible(fechaElegida) && fechaOtraValida) && ok;
+  ok = marcar("franja", !!$("#franja").value) && ok;
+  if(r.domicilio){
+    ok = marcar("direccion", $("#direccion").value.trim().length>=6) && ok;
+    ok = marcar("cp", /^\d{5}$/.test($("#cp").value.trim())) && ok;
+  }
+  if(!r.ls.length){ $("#errorCarrito").style.display="block"; ok=false; }
+  return ok;
+}
+
+function crearIdSolicitud(){
+  const existente = sessionStorage.getItem("pda_solicitud_pendiente");
+  if(existente) return existente;
+  const id = "PDAREQ-" + Date.now() + "-" + Math.random().toString(36).slice(2,10);
+  sessionStorage.setItem("pda_solicitud_pendiente", id);
+  return id;
+}
+function registrarYObtenerNumero(pedido){
+  return new Promise((resolve,reject) => {
+    if(!CONFIG.urlGoogleSheets) return reject(new Error("Google Sheets no está conectado"));
+    const callback = "pdaRegistro_" + Date.now() + "_" + Math.floor(Math.random()*10000);
+    const script = document.createElement("script");
+    const limpiar = () => { delete window[callback]; script.remove(); };
+    const timer = setTimeout(() => { limpiar(); reject(new Error("Tiempo de espera agotado")); }, 25000);
+    window[callback] = respuesta => {
+      clearTimeout(timer); limpiar();
+      if(respuesta && respuesta.ok && respuesta.numero) resolve(respuesta.numero);
+      else reject(new Error((respuesta && respuesta.error) || "No se pudo registrar el pedido"));
+    };
+    script.onerror = () => { clearTimeout(timer); limpiar(); reject(new Error("No se pudo conectar con el registro")); };
+    const json = JSON.stringify(pedido);
+    const bytes = new TextEncoder().encode(json);
+    let binario = "";
+    bytes.forEach(b => binario += String.fromCharCode(b));
+    const data = btoa(binario).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/g,"");
+    script.src = CONFIG.urlGoogleSheets + "?action=registrar&callback=" + encodeURIComponent(callback) + "&data=" + encodeURIComponent(data) + "&_=" + Date.now();
+    document.head.appendChild(script);
+  });
+}
+
+function textoWhatsApp(p){
+  const L = [];
+  L.push(`🎄 *NUEVO PEDIDO · PASTA D'ANNA*`);
+  if(p.prueba) L.push(`(PEDIDO DE PRUEBA)`);
+  L.push(`Nº: *${p.numero}*`, ``);
+  L.push(`👤 ${p.nombre}`);
+  L.push(`📞 ${p.telefono}${p.email?` · ${p.email}`:""}`, ``);
+  L.push(`*Productos:*`);
+  p.lineas.forEach(l => L.push(`• ${l.cantidad} × ${l.descripcion} = ${euro(l.importe)}`));
+  L.push(``);
+  if(p.domicilio){ L.push(`*TOTAL PRODUCTOS: ${euro(p.total)}*`); L.push(`Envío: a consultar`); }
+  else L.push(`*TOTAL: ${euro(p.total)}*`);
+  L.push(``);
+  L.push(`🚚 ${p.entrega}`);
+  if(p.domicilio) L.push(`📍 ${p.direccion}, ${p.cp}${p.zona?` (${p.zona})`:""}`);
+  L.push(`📅 ${p.fechaTexto} · ${p.franja}`);
+  L.push(`💳 Detalles del pago: se confirmarán por WhatsApp al confirmar el pedido.`);
+  if(p.notas) L.push(`📝 ${p.notas}`);
+  L.push(``);
+  L.push(`✅ *El pedido queda confirmado una vez que te respondamos.*`);
+  return L.join("\n");
+}
+
+
+
+$("#formPedido").addEventListener("submit", async e => {
+  e.preventDefault();
+  if(!puedePedir()){ $("#errorPeriodo").style.display="block"; return; }
+  pintarFechas();
+  const r = calcular();
+  if(!validar(r)){
+    const primero = document.querySelector(".invalido") || $("#productos");
+    primero.scrollIntoView({behavior:"smooth",block:"center"});
+    return;
+  }
+  const cantidades = {};
+  Object.keys(VARIANTES).forEach(id => cantidades[id] = carrito[id]||0);
+  const p = {
+    idSolicitud: crearIdSolicitud(),
+    numero: "",
+    nombre: $("#nombre").value.trim(),
+    telefono: $("#telefono").value.trim(),
+    email: $("#email").value.trim(),
+    entrega: document.querySelector('input[name=entrega]:checked').value,
+    domicilio: r.domicilio,
+    direccion: r.domicilio ? $("#direccion").value.trim() : "",
+    cp: r.domicilio ? $("#cp").value.trim() : "",
+    zona: r.domicilio ? $("#zona").value.trim() : "",
+    fecha: fechaSeleccionada(),
+    fechaTexto: capital(fechaTexto(fechaSeleccionada())),
+    franja: $("#franja").value,
+    pago: "A confirmar por WhatsApp",
+    notas: $("#notas").value.trim(),
+    lineas: r.ls.map(l => ({id:l.id, cantidad:l.c, descripcion:descripcion(l.v), importe:l.importe})),
+    cantidades,
+    subtotal: r.subtotal, envio: r.domicilio ? "A consultar" : 0, total: r.total,
+    prueba: estadoPeriodo()!=="abierto"
+  };
+  // Abrir una pestaña inmediatamente, dentro del clic del usuario, para evitar
+  // que el navegador bloquee WhatsApp mientras esperamos el registro en Google Sheets.
+  const ventanaWhatsApp = window.open("", "_blank");
+  if(ventanaWhatsApp){
+    ventanaWhatsApp.document.title = "Registrando pedido | Pasta D'Anna";
+    ventanaWhatsApp.document.body.innerHTML = `
+      <div style="font-family:Arial,sans-serif;max-width:620px;margin:55px auto;padding:36px 26px;text-align:center;color:#173d25;line-height:1.55">
+        <div style="font-size:64px;line-height:1">🎄</div>
+        <h2 style="font-size:clamp(28px,7vw,38px);margin:18px 0 12px">Registrando tu pedido…</h2>
+        <p style="font-size:clamp(18px,4.8vw,23px);margin:0">Espera unos segundos. WhatsApp se abrirá automáticamente cuando el pedido quede registrado.</p>
+      </div>`;
+  }
+
+  $("#btnEnviar").disabled = true;
+  $("#btnEnviar").textContent = "Registrando pedido…";
+  try {
+    p.numero = await registrarYObtenerNumero(p);
+  } catch(error) {
+    if(ventanaWhatsApp && !ventanaWhatsApp.closed){
+      ventanaWhatsApp.document.body.innerHTML = `
+        <div style="font-family:Arial,sans-serif;max-width:520px;margin:60px auto;padding:28px;text-align:center;color:#7a1010">
+          <div style="font-size:42px">⚠️</div>
+          <h2>No se pudo registrar el pedido</h2>
+          <p>Vuelve a la página de Pasta D'Anna, comprueba tu conexión e inténtalo nuevamente.</p>
+        </div>`;
+    }
+    $("#btnEnviar").disabled = false;
+    $("#btnEnviar").textContent = "📲 Enviar pedido por WhatsApp";
+    alert("No se pudo registrar el pedido. Comprueba la conexión e inténtalo de nuevo.");
+    return;
+  }
+  sessionStorage.removeItem("pda_solicitud_pendiente");
+  const texto = textoWhatsApp(p);
+  const url = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(texto)}`;
+
+  if(ventanaWhatsApp && !ventanaWhatsApp.closed){
+    // Guardamos una pantalla de retorno en el historial de la pestaña provisional.
+    // Al volver desde WhatsApp, el cliente verá instrucciones claras para cerrar
+    // esta pestaña y consultar el resumen en la página original de Pasta D'Anna.
+    const paginaRetorno = `<!DOCTYPE html>
+      <html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+      <title>Pedido registrado | Pasta D'Anna</title></head>
+      <body style="margin:0;background:#f7f2e8;color:#173d25;font-family:Arial,sans-serif">
+        <main style="max-width:650px;margin:0 auto;padding:42px 24px;text-align:center;line-height:1.55">
+          <div style="font-size:68px;line-height:1">🎄</div>
+          <h1 style="font-size:clamp(29px,7.5vw,42px);margin:20px 0 14px;color:#8b0a1e">¡Pedido registrado correctamente!</h1>
+          <p style="font-size:clamp(19px,5vw,24px);margin:0 0 16px">Tu pedido <strong>${p.numero}</strong> ha sido registrado y WhatsApp se ha abierto con el mensaje preparado.</p>
+          <div style="background:#fff;border:2px solid #d3a73a;border-radius:16px;padding:20px;margin:22px 0">
+            <p style="font-size:clamp(20px,5.2vw,25px);font-weight:700;margin:0;color:#8b0a1e">Para completar el pedido, envía el mensaje en WhatsApp.</p>
+          </div>
+          <p style="font-size:clamp(18px,4.7vw,22px);margin:0 0 24px">Después, puedes cerrar esta pestaña y volver a Pasta D'Anna para consultar el resumen de tu pedido.</p>
+          <button onclick="window.close()" style="border:0;border-radius:999px;background:#146b3a;color:#fff;font-size:20px;font-weight:700;padding:16px 28px;cursor:pointer">Cerrar esta pestaña</button>
+          <p style="font-size:15px;color:#607065;margin-top:18px">Si el botón no cierra la pestaña, puedes cerrarla desde el navegador.</p>
+        </main>
+      </body></html>`;
+    ventanaWhatsApp.document.open();
+    ventanaWhatsApp.document.write(paginaRetorno);
+    ventanaWhatsApp.document.close();
+    ventanaWhatsApp.location.href = url;
+  } else {
+    // Respaldo para navegadores que bloqueen incluso la pestaña provisional.
+    window.location.href = url;
+  }
+
+  $("#btnEnviar").disabled = false;
+  $("#btnEnviar").textContent = "📲 Enviar pedido por WhatsApp";
+
+  $("#numPedido").textContent = p.numero;
+  $("#textoPedido").textContent = texto.replace(/\*/g,"");
+  $("#btnReabrirWa").href = url;
+  $("#modal").classList.add("abierto");
+});
+
+$("#btnCopiar").onclick = async () => {
+  try{ await navigator.clipboard.writeText($("#textoPedido").textContent); $("#btnCopiar").textContent="✅ Copiado"; }
+  catch(e){ $("#btnCopiar").textContent="No se pudo copiar"; }
+  setTimeout(()=>$("#btnCopiar").textContent="📋 Copiar texto del pedido",2000);
+};
+$("#btnNuevo").onclick = () => {
+  carrito = {}; guardar();
+  $("#formPedido").reset();
+  $("#fechaOtra").value = "";
+  pintarProductos(); pintarFechas(); pintarFranjas(); actualizar();
+  $("#modal").classList.remove("abierto");
+  window.scrollTo({top:0,behavior:"smooth"});
+};
+
+$$("#formPedido input, #formPedido select").forEach(el => el.addEventListener("input", () => {
+  const c = el.closest("[data-campo]"); if(c) c.classList.remove("invalido");
+}));
+
+/* ---------- Decoración ---------- */
+(function(){
+  const n = $("#nieve"), total = window.innerWidth<700 ? 18 : 35;
+  for(let i=0;i<total;i++){
+    const s = document.createElement("span"); s.className="copo"; s.textContent = Math.random()>.5?"❄":"•";
+    s.style.left = Math.random()*100+"vw"; s.style.fontSize = (8+Math.random()*12)+"px";
+    s.style.animationDuration = (9+Math.random()*14)+"s"; s.style.animationDelay = (-Math.random()*20)+"s";
+    n.appendChild(s);
+  }
+  const l = $("#luces"), nb = Math.max(14, Math.floor(window.innerWidth/38));
+  for(let i=0;i<nb;i++){ const b=document.createElement("span"); b.className="bombilla"; l.appendChild(b); }
+})();
+
+/* ---------- Inicio ---------- */
+prepararFormulario();
+pintarProductos();
+pintarEstado();
+actualizar();
+cuentaAtras();
+setInterval(cuentaAtras, 1000);
+setInterval(() => { pintarEstado(); pintarFechas(); }, 60000);
+
+/* Oculta el boton flotante al llegar al formulario, solo en movil */
+(function configurarFlotanteMovil(){
+  const seccionPedido = document.getElementById("pedido");
+  const botonFlotante = document.getElementById("flotante");
+  if(!seccionPedido || !botonFlotante || !("IntersectionObserver" in window)) return;
+
+  const observadorPedido = new IntersectionObserver(([entrada]) => {
+    const esMovil = window.matchMedia("(max-width: 860px)").matches;
+    botonFlotante.classList.toggle("oculto-formulario", esMovil && entrada.isIntersecting);
+  }, {
+    threshold: 0.08,
+    rootMargin: "-8% 0px -12% 0px"
+  });
+
+  observadorPedido.observe(seccionPedido);
+  window.addEventListener("resize", () => {
+    if(!window.matchMedia("(max-width: 860px)").matches){
+      botonFlotante.classList.remove("oculto-formulario");
+    }
+  });
+})();
+
+</script>
+</body>
+</html>
